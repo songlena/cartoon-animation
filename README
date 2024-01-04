@@ -1,0 +1,39 @@
+README Cartoon
+
+Overview:
+My program's main function is to animate a mushroom back and forth on the screen (indefinitely). On
+specific keyboard presses, the color of the mushroom changes. Pressing ENTER will invert the color of the mushroom while
+pressing the BACK_SPACE will change the the mushroom to its original color. I achieved this by using the switch method
+and adding different cases of key press. The program features the App class, PaneOrganizer, Cartoon, Mushroom, and
+Constants. App contains PaneOrganizer which contains Cartoon, Mushroom, and other classes like HBox, Label, and
+BorderPane for organization. The Constants class is used to simplify/clean up the code. Instead of using numbers, we
+can create the Constants class and assign final values that the other Classes can access. The Cartoon class lays out
+the scene, including the sun, sky, and grass shapes. The Mushroom class creates the composite shape of the mushroom,
+consisting of two ellipses and four circles that move together across the screen. The key board press events and the
+quit button are created in the PaneOrganizer class. The label of my program updates the number of laps the mushroom
+has run (back and forth). The reason I created this specific program is because my friends want to dress up as
+Mario Kart characters for Halloween, and I thought the mushroom could represent Toad!
+
+Design Choices:
+For design, I decided to implement some Java FX features to make my animation look a little more three dimensional
+and realistic. For example, I included a gaussian blur for the sun in the Cartoon class and added some shading to the
+mushroom in the Mushroom class. The reason I created a Mushroom class instead of defining my shapes in the Cartoon class
+was to organize the code in a way that divided the animation into subsections. PaneOrganizer is the overarching class
+that organizes the panes, labels, and buttons while also instantiating an instance of the Cartoon class. The Cartoon
+class sets up the creative elements of the scene, particularly for the stationary shapes (circle for the sun and two
+rectangles for the sky and foreground). PaneOrganizer then organizes the elements of my code via the root BorderPane,
+buttonPane, and more. This hierarchy makes the code easier to read. Lastly, Mushroom is responsible for creating the
+composite shape that moves across the screen. The timeline is contained within the Mushroom class because it made more
+sense logically for my program since my Cartoon class is only for stationary shapes. In Mushroom class, I created a
+method called updateMushroom to indefinitely translate the X location of each of the shapes that make up the mushroom
+component. The Mushroom class has access to the label through association, and the label updates based on how many laps
+the mushroom has made back and forth across the screen.
+
+Known Bugs:
+None
+
+Debugging Collaborators:
+None
+
+Hours:
+This project took me 15 hours to complete.
